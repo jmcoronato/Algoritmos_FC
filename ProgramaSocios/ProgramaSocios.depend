@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1700254975 source:c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\tp\programasocios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"funciones.h"
+
+1700255015 c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\tp\programasocios\funciones.h
+
