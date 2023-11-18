@@ -56,6 +56,7 @@ void ind_vaciar (t_indice* ind)
 {
     vaciar_lista(&(ind->lista));
     free(ind->reg_ind);
+    ind = NULL;
 }
 
 int ind_grabar (const t_indice* ind, const char* path)

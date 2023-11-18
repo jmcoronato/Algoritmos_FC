@@ -19,7 +19,7 @@ int main() {
       t_indice ind;
 
       ind_crear(&ind,sizeof(long),cmpLong);
-
+//
 //      puts("Ingrese el path del archivo de texto");
 //
 //      gets(pathTxt);

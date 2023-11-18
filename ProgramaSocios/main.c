@@ -5,8 +5,20 @@
 
 int main()
 {
-        char opcion;
-    int flag = 1;
+   char opcion;
+   char pathSocios[51] = "../GenerarIndice/socios.dat";
+   char pathInd[51] = "../GenerarIndice/socios.idx";
+   int flag = 1;
+   t_indice ind;
+
+   ind_crear(&ind,sizeof(long),cmpLong);
+
+   ind_cargar(&ind,pathInd);
+
+    FILE* archSocios = fopen(pathSocios,"r+b");
+
+    if(!archSocios)
+      return ERROR;
 
     do {
         if (flag) {
@@ -30,13 +42,13 @@ int main()
                 printf("Simulando dar de alta un nuevo socio...\n");
                 break;
             case 'm':
-                printf("Simulando modificar el campo 'Apellido, Nombre'...\n");
+                modificarNombreSocio(archSocios,&ind);
                 break;
             case 'b':
-                printf("Simulando dar de baja un socio...\n");
+                bajaSocio(archSocios,&ind);
                 break;
             case 'l':
-                printf("Simulando listar socios dados de baja...\n");
+                leer_socios(pathSocios);
                 break;
             case 'v':
                 printf("Simulando visualizar socios activos...\n");
@@ -46,10 +58,11 @@ int main()
                 break;
             case 's':
                 printf("\nSaliendo del sistema, que tenga un excelente dia!\n");
+                fclose(archSocios);
+                ind_vaciar(&ind);
                 break;
             default:
                 printf("Opcion no valida. Por favor, ingrese una opción valida.\n");
         }
     } while (opcion != 'S' && opcion != 's');
-
 }

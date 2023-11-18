@@ -31,6 +31,19 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../GenerarIndice/Fecha.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../GenerarIndice/Fecha.h" />
+		<Unit filename="../GenerarIndice/Indice.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../GenerarIndice/Indice.h" />
+		<Unit filename="../GenerarIndice/Lista.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../GenerarIndice/Lista.h" />
+		<Unit filename="../GenerarIndice/Socios.h" />
 		<Unit filename="funciones.c">
 			<Option compilerVar="CC" />
 		</Unit>
