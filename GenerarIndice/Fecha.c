@@ -4,7 +4,6 @@
 Fecha ingresarFecha()
 {
     Fecha f;
-    puts("Ingrese una fecha (d/m/a):");
     fflush(stdin);
     scanf("%d/%d/%d", &f.dia, &f.mes, &f.anio);
     return f;

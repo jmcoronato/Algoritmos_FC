@@ -7,13 +7,13 @@
 
 1700255015 c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\tp\programasocios\funciones.h
 
-1700341098 source:c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\programasocios\main.c
+1700439694 source:c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\programasocios\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	"funciones.h"
 
-1700341085 c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\programasocios\funciones.h
+1700439659 c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\programasocios\funciones.h
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -38,7 +38,7 @@
 
 1699564921 c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\generarindice\fecha.h
 
-1700343786 source:c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\programasocios\funciones.c
+1700439659 source:c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\programasocios\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -48,7 +48,7 @@
 	"../GenerarIndice/Socios.h"
 	"../GenerarIndice/Fecha.h"
 
-1699564922 source:c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\generarindice\fecha.c
+1700408754 source:c:\users\juanc\onedrive - universidad nacional de la matanza\2c 2023\algoritmos\algoritmos_fc\generarindice\fecha.c
 	<stdio.h>
 	"Fecha.h"
 

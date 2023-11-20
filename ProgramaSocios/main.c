@@ -48,10 +48,10 @@ int main()
                 bajaSocio(archSocios,&ind);
                 break;
             case 'l':
-                leer_socios(pathSocios);
+                leerSociosBaja(archSocios,&ind);
                 break;
             case 'v':
-                printf("Simulando visualizar socios activos...\n");
+                leerSociosAlta(archSocios,&ind);
                 break;
             case 'p':
                 printf("Simulando listar socios con retraso en el pago...\n");
