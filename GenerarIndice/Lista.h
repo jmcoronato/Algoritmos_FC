@@ -43,6 +43,7 @@ void vaciar_lista(t_lista *pl);
 void ordenarLista(t_lista* pl, Cmp cmp, int sentido);
 void recorrerLista(const t_lista* pl, Accion accion, void* extra, void* extra2);
 void recorrer_lista_ind(const t_lista* pl,void (*accion)(const void *, unsigned, void *), size_t tam, void* param);
+int sacar_primero_de_lista(t_lista *pl,void *pd,size_t tam);
 
 void invertirLista(t_lista *pl, Cmp cmp);
 void crearListaInvertida(t_lista *pl,t_lista *pl2, Cmp cmp);

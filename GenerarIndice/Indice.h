@@ -27,6 +27,8 @@ void ind_vaciar (t_indice* ind);
 int ind_grabar (const t_indice* ind, const char* path);
 int ind_cargar(t_indice* ind, const char* path);
 int ind_recorrer (const t_indice* ind, void (*accion)(const void *, unsigned, void *),void* param);
+int ind_fin (const t_indice *ind);
+int ind_primero (t_indice* ind, void *clave, unsigned* nro_reg);
 
 void mostrar_clave(const void* dato, unsigned tam, void* param);
 

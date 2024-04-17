@@ -102,14 +102,37 @@ int ind_cargar(t_indice* ind, const char* path)
 
 int ind_recorrer (const t_indice* ind, void (*accion)(const void *, unsigned, void *),void* param)
 {
-   size_t tam_reg = ind->tam_clave+sizeof(unsigned);
-   recorrer_lista_ind(&ind->lista,accion,tam_reg,param);
+   recorrer_lista_ind(&ind->lista,accion,ind->tam_clave,param);
    return OK;
+}
+
+int ind_fin (const t_indice *ind)
+{
+    t_lista listaAux=ind->lista;
+    if(lista_vacia(&listaAux))
+        return 1;
+    return 0;
+}
+int ind_primero (t_indice* ind, void *clave, unsigned* nro_reg)
+{
+    void* regInd=malloc(ind->tam_clave+sizeof(unsigned));
+    if(!regInd)
+        return 0;
+    if(ind_fin(ind))
+    {
+        free(regInd);
+        return 0;
+    }
+    sacar_primero_de_lista(&ind->lista,regInd,ind->tam_clave+sizeof(unsigned));
+    memcpy(clave,regInd,ind->tam_clave);
+    memcpy(nro_reg,regInd+ind->tam_clave,sizeof(unsigned));
+    free(regInd);
+    return 1;
 }
 
 void mostrar_clave(const void* dato, unsigned tam, void* param)
 {
    int* clave = (int*)dato;
-   unsigned* reg = (unsigned*)(dato+sizeof(int));
+   unsigned* reg = (unsigned*)(dato+tam);
    printf("Clave: %d Registro: %d\n",*clave,*reg);
 }

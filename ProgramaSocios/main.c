@@ -35,11 +35,13 @@ int main()
         printf("(S) Salir\n");
 
         printf("Ingrese la opcion: ");
-        scanf(" %c", &opcion);
+        fflush(stdin);
+        scanf("%c", &opcion);
+        printf("\n");
 
         switch (tolower(opcion)) {
             case 'a':
-                printf("Simulando dar de alta un nuevo socio...\n");
+                altaSocio(archSocios,&ind);
                 break;
             case 'm':
                 modificarNombreSocio(archSocios,&ind);
@@ -54,11 +56,12 @@ int main()
                 leerSociosAlta(archSocios,&ind);
                 break;
             case 'p':
-                printf("Simulando listar socios con retraso en el pago...\n");
+                mostrarMax10SociosMasDeudores(archSocios,cmpFecha);
                 break;
             case 's':
                 printf("\nSaliendo del sistema, que tenga un excelente dia!\n");
                 fclose(archSocios);
+                ind_grabar(&ind,pathInd);
                 ind_vaciar(&ind);
                 break;
             default:

@@ -102,3 +102,39 @@ int binAindice(t_indice *ind, const char *path)
     fclose(pf);
     return 1;
 }
+
+int generarIndice(t_indice *ind)
+{
+   char pathTxt[11];
+   char pathBin[11];
+   char pathIdx[11];
+   char* act;
+
+   printf("Escriba la ruta del archivo de texto de Socios: ");
+
+   scanf("%s",pathTxt);
+
+   strcpy(pathBin,pathTxt);
+
+   act = strchr(pathBin,'.');
+
+   *act = '\0';
+
+   strcpy(act,".dat");
+
+   strcpy(pathIdx,pathTxt);
+
+   act = strchr(pathIdx,'.');
+
+   *act = '\0';
+
+   strcpy(act,".idx");
+
+   archTxtABin(pathBin,pathTxt);
+
+   binAindice(ind,pathBin);
+
+   ind_grabar(ind,pathIdx);
+
+   return OK;
+}

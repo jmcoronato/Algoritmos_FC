@@ -327,3 +327,15 @@ void recorrer_lista_ind(const t_lista* pl,void (*accion)(const void *, unsigned,
       pl = &(*pl)->sig;
    }
 }
+
+int sacar_primero_de_lista(t_lista *pl,void *pd,size_t tam)
+{
+    t_nodo* elim=*pl;
+    if(!*pl)
+        return 0;
+    *pl=elim->sig;
+    memcpy(pd,elim->info,min(tam,elim->tam));
+    free(elim->info);
+    free(elim);
+    return 1;
+}

@@ -6,33 +6,20 @@
 #include "Fecha.h"
 #include "Socios.h"
 #include "funciones.h"
-#define TAM_SOCIOS 5
 
 
 
 int main() {
 
-   char pathTxt[11];
-   char* pathBin = "socios.dat";
-   char* pathInd = "socios.idx";
-
       t_indice ind;
 
       ind_crear(&ind,sizeof(long),cmpLong);
 
-//      puts("Ingrese el path del archivo de texto");
-//
-//      gets(pathTxt);
-//
-//      archTxtABin(pathBin,pathTxt);
-//
-//      binAindice(&ind,pathBin);
-//
-//      ind_grabar(&ind,pathInd);
+      generarIndice(&ind);
 
-      ind_cargar(&ind,pathInd);
-
-      ind_recorrer(&ind,mostrar_clave,NULL);
+//      ind_cargar(&ind,"socios.idx");
+//
+//      ind_recorrer(&ind,mostrar_clave,NULL);
 
 
     return 0;
